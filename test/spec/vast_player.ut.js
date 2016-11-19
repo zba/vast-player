@@ -84,7 +84,8 @@ describe('VASTPlayer(container, config)', function() {
                 },
                 tracking: {
                     mapper: function() {}
-                }
+                },
+                videoOptions: {}
             };
 
             player = new VASTPlayer(container, config);
@@ -136,7 +137,8 @@ describe('VASTPlayer(container, config)', function() {
                             },
                             tracking: {
                                 mapper: jasmine.any(Function)
-                            }
+                            },
+                            videoOptions: {}
                         });
                         expect(player.config.tracking.mapper('foo')).toBe('foo', 'default mapper is not an identity fn');
                     });
@@ -155,7 +157,8 @@ describe('VASTPlayer(container, config)', function() {
                             },
                             tracking: {
                                 mapper: jasmine.any(Function)
-                            }
+                            },
+                            videoOptions: {}
                         });
                         expect(player.config.tracking.mapper('foo')).toBe('foo', 'default mapper is not an identity fn');
                     });

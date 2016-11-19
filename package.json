@@ -67,7 +67,7 @@
     "browserify-versionify": "^1.0.6",
     "lie": "^3.0.2",
     "sort-by": "^1.1.1",
-    "vastacular": "^0.2.0"
+    "vastacular": "git://github.com/zba/vastacular.git#master"
   },
   "browserify": {
     "transform": [

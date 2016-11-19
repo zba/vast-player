@@ -119,6 +119,8 @@ API
             * **config.vast.maxRedirects**:`Number`: The number of VAST `<Wrapper>`s that are allowed to be fetched. Defaults to `5`.
         * **config.tracking**:`Object`: Configuration for firing tracking pixels
             * **config.tracking.mapper**:`Function`: This `Function` can be used to transform the URIs of VAST tracking pixels. The `Function` will be invoked every time a tracking pixel is fired, with the URI of the pixel as the only argument. The returned `String` URI will be fired. Deaults to an [identity `Function`](https://en.wikipedia.org/wiki/Identity_function).
+        * **config.videoOptions**:`Object`: Configuration for htmlVideoPlayer
+            * **config.videoOptions.keepVideo**:`Boolean` video will be stalled on last frame if this is true
 * Methods
     * **load(*uri*:`String`)** => `Promise`: Fetches a VAST ad tag and loads one of its `<MediaFile>`s into the *container*. The returned `Promise` will be resolved when it is safe to start playback via `startAd()`.
     * **startAd()** => `Promise`: Starts playback of the ad. This method may only be called once. The returned `Promise` will be fulfilled when the ad starts playing. This method cannot be called until the `Promise` returned by `load()` is fulfilled.
